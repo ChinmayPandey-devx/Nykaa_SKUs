@@ -1,26 +1,24 @@
 @layer base {
   :root {
-    --bg-parchment: #F6F0E4;
-    --bg-card: #FFFFFF;
-    --bg-card-subtle: #FAF6F0;
-    --text-forest: #1E3A2B;
-    --text-body: #2D3A30;
-    --text-muted: #66756B;
-    --accent-berry: #B23A5C;
-    --accent-berry-light: #FDF0F3;
-    --accent-berry-hover: #962E4A;
-    --border-warm: #E6DDD0;
-    --border-active: #C2B6A6;
-    --badge-red-bg: #FDF2F2;
-    --badge-red-text: #9B1C1C;
-    --badge-red-border: #F8B4B4;
-    --badge-green-bg: #F0FDF4;
-    --badge-green-text: #166534;
-    --badge-green-border: #86EFAC;
-    
-    --font-serif: 'Fraunces', Georgia, serif;
-    --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
-    --font-mono: 'IBM Plex Mono', monospace;
+    --nykaa-pink: #FC2779;
+    --nykaa-pink-hover: #E01E69;
+    --nykaa-pink-light: #FFF0F5;
+    --trust-green: #1E8E3E;
+    --trust-green-bg: #E8F5E9;
+    --text-primary: #262626;
+    --text-secondary: #767676;
+    --text-tertiary: #9C9C9C;
+    --bg-white: #FFFFFF;
+    --bg-section: #F7F7F7;
+    --border-light: #EEEEEE;
+    --border-gray: #E0E0E0;
+    --badge-red-bg: #FDEDED;
+    --badge-red-text: #D32F2F;
+    --badge-red-border: #FFCDD2;
+    --badge-green-bg: #EAF7EC;
+    --badge-green-text: #1E8E3E;
+    --badge-green-border: #C8E6C9;
+    --star-gold: #FFA800;
   }
 }
 
@@ -31,32 +29,20 @@
 }
 
 body {
-  background-color: var(--bg-parchment);
-  color: var(--text-body);
-  font-family: var(--font-sans);
+  background-color: var(--bg-section);
+  color: var(--text-primary);
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
   min-height: 100vh;
-  line-height: 1.5;
+  line-height: 1.4;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-.font-serif {
-  font-family: var(--font-serif);
-}
-
-.font-sans {
-  font-family: var(--font-sans);
-}
-
-.font-mono {
-  font-family: var(--font-mono);
-}
-
-/* Animations */
-@keyframes fadeInSlide {
+/* Cross-fade 250ms animation */
+@keyframes contentFade {
   from {
     opacity: 0;
-    transform: translateY(6px);
+    transform: translateY(4px);
   }
   to {
     opacity: 1;
@@ -64,21 +50,21 @@ body {
   }
 }
 
-.animate-fade-in {
-  animation: fadeInSlide 300ms cubic-bezier(0.16, 1, 0.3, 1) forwards;
+.animate-cross-fade {
+  animation: contentFade 250ms ease-out forwards;
 }
 
-/* Custom Scrollbar for phone content */
+/* Custom phone internal scrollbar */
 .phone-scroll::-webkit-scrollbar {
-  width: 4px;
+  width: 3px;
 }
 .phone-scroll::-webkit-scrollbar-track {
   background: transparent;
 }
 .phone-scroll::-webkit-scrollbar-thumb {
-  background: #D9CFB8;
-  border-radius: 4px;
+  background: #E0E0E0;
+  border-radius: 3px;
 }
 .phone-scroll::-webkit-scrollbar-thumb:hover {
-  background: #BFAF95;
+  background: #C4C4C4;
 }
